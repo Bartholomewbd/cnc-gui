@@ -1,0 +1,5 @@
+<app-program-entry
+  *ngFor="let entry of entries"
+  [entry]="entry"
+  (deleteEntry)="deleteEntry($event)"
+></app-program-entry>

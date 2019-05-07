@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <form #toolboxForm="ngForm">
+    {{ toolboxForm.value | json }}
+    <div class="form-group">
+      <label>Instruction List</label>
+      <select
+        class="custom-select"
+        name="instructionTitle"
+        [(ngModel)]="title"
+        (ngModelChange)="searchInstruction(title)"
+      >
+        <option *ngFor="let instruction of instructions">{{
+          instruction.title
+        }}</option>
+      </select>
+      <div *ngIf="title">
+        <p>Instruction Details:</p>
+        <div *ngFor="let instruct of instructionDetails">
+          {{ instruct.description }}
+        </div>
+      </div>
+      <button
+        (click)="onAdd(instruction)"
+        class="btn btn-primary"
+        type="submit"
+      >
+        Add to Program
+      </button>
+    </div>
+  </form>
+</div>
