@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
-import { Entry } from "../models/entry";
+import { Instruction } from "../models/instruction";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -18,7 +18,7 @@ export class InstructionService {
 
   constructor(private http: HttpClient) {}
 
-  getInstructions(): Observable<Entry[]> {
-    return this.http.get<Entry[]>(this._url);
+  getInstructions(): Observable<Instruction[]> {
+    return this.http.get<Instruction[]>(this._url);
   }
 }

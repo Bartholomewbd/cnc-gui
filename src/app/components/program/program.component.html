@@ -1,5 +1,7 @@
-<app-program-entry
-  *ngFor="let entry of entries"
-  [entry]="entry"
-  (deleteEntry)="deleteEntry($event)"
-></app-program-entry>
+<p-card [style]="{ width: '360px' }">
+  <app-program-entry
+    *ngFor="let entry of entries"
+    [entry]="entry"
+    (deleteEntry)="deleteEntry($event)"
+  ></app-program-entry>
+</p-card>

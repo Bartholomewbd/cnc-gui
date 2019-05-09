@@ -1,6 +1,7 @@
 <div [ngClass]="setClasses()">
   <p>
-    {{ entry.title }} : {{ entry.cutLength }}
+    {{ entry.title }} : {{ entry.cutLength }} : {{ entry.xCoordinate }} :
+    {{ entry.yCoordinate }}
     <button (click)="onDelete(entry)" class="del">x</button>
   </p>
 </div>

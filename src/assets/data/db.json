@@ -5,36 +5,41 @@
       "title": "CutMoveEast",
       "cutLength": 5,
       "completed": false
+    },
+    {
+      "title": "CutMoveSouth",
+      "cutLength": 25,
+      "completed": false,
+      "id": 3
+    },
+    {
+      "title": "CutMoveWest",
+      "cutLength": 30,
+      "completed": false,
+      "id": 4
     }
   ],
   "instructions": [
     {
       "id": 1,
-      "title": "SetCutLocation",
-      "description": "Set the cut location in X and Y coordinates",
-      "X": 0,
-      "Y": 0
-    },
-    {
-      "id": 2,
       "title": "CutMoveNorth",
       "description": "Cut Moving up the Y axis",
       "cutLength": 0
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "CutMoveSouth",
       "description": "Cut Moving down the Y axis",
       "cutLength": 0
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "CutMoveEast",
       "description": "Cut Moving right across the X axis",
       "cutLength": 0
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "CutMoveWest",
       "description": "Cut Moving left across the Y axis",
       "cutLength": 0

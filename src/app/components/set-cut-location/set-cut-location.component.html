@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <form #dimensionsForm="ngForm" (ngSubmit)="onAdd()">
+    <div class="form-group">
+      <h4>Set Cut Location Coordinates</h4>
+      <label>X</label>
+      <input
+        type="number"
+        class="form-control"
+        name="xCoordinate"
+        [(ngModel)]="xCoordinate"
+      />
+      <label>Y</label>
+      <input
+        type="number"
+        class="form-control"
+        name="yCoordinate"
+        [(ngModel)]="yCoordinate"
+      />
+      <button class="btn btn-primary" type="submit">Set Coordinates</button>
+    </div>
+  </form>
+</div>

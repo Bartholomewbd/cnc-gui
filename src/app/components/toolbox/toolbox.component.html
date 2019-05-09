@@ -1,56 +1,14 @@
-<div class="container-fluid">
-  <form #toolboxForm="ngForm">
-    <div class="form-group">
-      <h4>Set Material Block Dimensions</h4>
-      <label>Length</label>
-      <input type="number" class="form-conrol" max="100" />
-      <label>Width</label>
-      <input type="number" class="form-conrol" max="100" />
-      <button>Set Dimensions</button>
-    </div>
-    <div class="form-group">
-      <select
-        required
-        #instruct="ngModel"
-        [class.is-invalid]="instruct.invalid && instruct.touched"
-        class="custom-select"
-        name="instructionTitle"
-        [(ngModel)]="title"
-        (ngModelChange)="searchInstruction(title)"
-      >
-        <option value="">Instruction Tool Box</option>
-        <option *ngFor="let instruction of instructions">{{
-          instruction.title
-        }}</option>
-      </select>
-      <small
-        class="text-danger"
-        [class.d-none]="instruct.valid || instruct.untouched"
-        >Please choose an instruction</small
-      >
-      <div *ngIf="title">
-        <div *ngFor="let instruct of instructionDetails">
-          <p>Instruction Details: {{ instruct.description }}</p>
-        </div>
-      </div>
-      <div class="form-group" *ngIf="title == 'SetCutLocation'">
-        <label>X</label>
-        <input type="number" class="form-conrol" max="100" />
-        <label>Y</label>
-        <input type="number" class="form-conrol" max="100" />
-      </div>
-      <div class="form-group" *ngIf="title !== 'SetCutLocation' || value != ''">
-        <label>Length of Cut</label>
-        <input type="number" class="form-conrol" max="100" />
-      </div>
+<p-card [style]="{ width: '450' }">
+  <p-card [style]="{ width: '450' }">
+    <app-set-material-dimensions></app-set-material-dimensions>
+  </p-card>
 
-      <button
-        (click)="onAdd(instruction)"
-        class="btn btn-primary"
-        type="submit"
-      >
-        Add to Program
-      </button>
-    </div>
-  </form>
-</div>
+  <p-card [style]="{ width: '450' }">
+    <app-set-cut-location (addEntry)="addEntry($event)"></app-set-cut-location>
+  </p-card>
+  <p-card [style]="{ width: '450' }">
+    <app-instruction-dropdown-form
+      (addEntry)="addEntry($event)"
+    ></app-instruction-dropdown-form>
+  </p-card>
+</p-card>

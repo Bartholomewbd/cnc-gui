@@ -11,7 +11,7 @@ import { Entry } from "../../models/entry";
 export class ProgramComponent implements OnInit {
   entries: Entry[];
 
-  constructor(private _programEntriesService: ProgramEntriesService) {}
+  constructor(public _programEntriesService: ProgramEntriesService) {}
 
   ngOnInit() {
     //Grab the entries in the DB for the program

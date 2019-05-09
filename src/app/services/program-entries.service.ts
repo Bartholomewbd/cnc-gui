@@ -26,4 +26,8 @@ export class ProgramEntriesService {
     const url = `${this._url}/${entry.id}`;
     return this.http.delete<Entry>(url, httpOptions);
   }
+
+  addEntry(entry: Entry): Observable<Entry> {
+    return this.http.post<Entry>(this._url, entry, httpOptions);
+  }
 }

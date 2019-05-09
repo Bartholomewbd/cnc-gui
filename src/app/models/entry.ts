@@ -4,6 +4,5 @@ export class Entry {
   xCoordinate?: number;
   yCoordinate?: number;
   cutLength?: number;
-  description: string;
   completed: boolean;
 }
