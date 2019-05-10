@@ -1,14 +1,9 @@
-<p-card [style]="{ width: '450' }">
-  <p-card [style]="{ width: '450' }">
-    <app-set-material-dimensions></app-set-material-dimensions>
-  </p-card>
+<div class="cointainer">
+  <app-set-material-dimensions></app-set-material-dimensions>
 
-  <p-card [style]="{ width: '450' }">
-    <app-set-cut-location (addEntry)="addEntry($event)"></app-set-cut-location>
-  </p-card>
-  <p-card [style]="{ width: '450' }">
-    <app-instruction-dropdown-form
-      (addEntry)="addEntry($event)"
-    ></app-instruction-dropdown-form>
-  </p-card>
-</p-card>
+  <app-set-cut-location (addEntry)="addEntry($event)"></app-set-cut-location>
+
+  <app-instruction-dropdown-form
+    (addEntry)="addEntry($event)"
+  ></app-instruction-dropdown-form>
+</div>

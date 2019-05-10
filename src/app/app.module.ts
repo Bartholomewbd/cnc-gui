@@ -2,9 +2,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { AccordionModule } from "primeng/accordion";
-import { CardModule } from "primeng/card";
-
 import { AppComponent } from "./app.component";
 import { ProgramComponent } from "./components/program/program.component";
 import { InstructionComponent } from "./components/instruction/instruction.component";
@@ -17,7 +14,7 @@ import { FormsModule } from "@angular/forms";
 import { SetMaterialDimensionsComponent } from "./components/set-material-dimensions/set-material-dimensions.component";
 import { InstructionDropdownFormComponent } from "./components/instruction-dropdown-form/instruction-dropdown-form.component";
 import { SetCutLocationComponent } from "./components/set-cut-location/set-cut-location.component";
-import { CoordinatesComponent } from './components/coordinates/coordinates.component';
+import { CoordinatesComponent } from "./components/coordinates/coordinates.component";
 
 @NgModule({
   declarations: [
@@ -36,9 +33,7 @@ import { CoordinatesComponent } from './components/coordinates/coordinates.compo
     HttpClientModule,
     FormsModule,
     NgbModule,
-    BrowserAnimationsModule,
-    AccordionModule,
-    CardModule
+    BrowserAnimationsModule
   ],
   providers: [InstructionService, ProgramEntriesService],
   bootstrap: [AppComponent]

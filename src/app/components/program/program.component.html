@@ -1,7 +1,11 @@
-<p-card [style]="{ width: '360px' }">
+<app-coordinates [entry]="entry"></app-coordinates>
+
+<div class="card text-white bg-secondary mb-3" style="width: 25rem;">
   <app-program-entry
     *ngFor="let entry of entries"
     [entry]="entry"
     (deleteEntry)="deleteEntry($event)"
   ></app-program-entry>
-</p-card>
+
+  <button (click)="runProgram()">Run Program</button>
+</div>

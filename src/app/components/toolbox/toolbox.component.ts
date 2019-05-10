@@ -11,11 +11,11 @@ import { Entry } from "../../models/entry";
 export class ToolboxComponent implements OnInit {
   entries: Entry[];
 
-  constructor(public _programEntriesService: ProgramEntriesService) {}
+  constructor(public programEntriesService: ProgramEntriesService) {}
   ngOnInit() {}
 
   addEntry(entry: Entry) {
-    this._programEntriesService.addEntry(entry).subscribe(entry => {
+    this.programEntriesService.addEntry(entry).subscribe(entry => {
       this.entries.push(entry);
     });
   }

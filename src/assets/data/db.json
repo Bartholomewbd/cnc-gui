@@ -17,6 +17,12 @@
       "cutLength": 30,
       "completed": false,
       "id": 4
+    },
+    {
+      "title": "CutMoveSouth",
+      "cutLength": 25,
+      "completed": false,
+      "id": 5
     }
   ],
   "instructions": [

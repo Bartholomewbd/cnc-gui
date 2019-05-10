@@ -17,7 +17,7 @@ export class SetCutLocationComponent implements OnInit {
 
   onAdd() {
     const newEntry = {
-      title: "setCutLocation",
+      title: "SetCutLocation",
       xCoordinate: this.xCoordinate,
       yCoordinate: this.yCoordinate,
       completed: false

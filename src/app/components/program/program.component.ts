@@ -11,11 +11,11 @@ import { Entry } from "../../models/entry";
 export class ProgramComponent implements OnInit {
   entries: Entry[];
 
-  constructor(public _programEntriesService: ProgramEntriesService) {}
+  constructor(public programEntriesService: ProgramEntriesService) {}
 
   ngOnInit() {
     //Grab the entries in the DB for the program
-    this._programEntriesService.getEntries().subscribe(entries => {
+    this.programEntriesService.getEntries().subscribe(entries => {
       this.entries = entries;
     });
   }
@@ -24,6 +24,10 @@ export class ProgramComponent implements OnInit {
     //delete single program entry from UI
     this.entries = this.entries.filter(e => e.id !== entry.id);
     //delete single program entry from the DB
-    this._programEntriesService.deleteEntry(entry).subscribe();
+    this.programEntriesService.deleteEntry(entry).subscribe();
+  }
+
+  runProgram() {
+    console.log("run!");
   }
 }

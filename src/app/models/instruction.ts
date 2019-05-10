@@ -5,5 +5,4 @@ export class Instruction {
   yCoordinate?: number;
   cutLength?: number;
   description: string;
-  completed: boolean;
 }

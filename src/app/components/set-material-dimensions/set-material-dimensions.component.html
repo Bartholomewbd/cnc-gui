@@ -1,12 +1,20 @@
-<div class="container-fluid">
-  <form #dimensionsForm="ngForm">
-    <div class="form-group">
-      <h4>Set Material Block Dimensions</h4>
-      <label>Length</label>
-      <input type="number" class="form-control" max="100" />
-      <label>Width</label>
-      <input type="number" class="form-control" max="100" />
-      <button class="btn btn-primary" type="submit">Set Dimensions</button>
-    </div>
-  </form>
+<div class="card text-white bg-secondary mb-3" style="width: 40rem;">
+  <div class="container-fluid">
+    <form #dimensionsForm="ngForm">
+      <div class="form-group">
+        <h4 class="text-center">Set Material Block Dimensions</h4>
+        <div class="form-inline">
+          <label>Length</label>
+          <input type="number" class="form-control" max="100" />
+          <label>Width</label>
+          <input type="number" class="form-control" max="100" />
+        </div>
+        <div class="text-center">
+          <button class="btn btn-outline-primary " type="submit">
+            Set Dimensions
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>

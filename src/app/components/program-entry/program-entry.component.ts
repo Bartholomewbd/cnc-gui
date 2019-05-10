@@ -14,11 +14,18 @@ export class ProgramEntryComponent implements OnInit {
 
   ngOnInit() {}
 
+  formatEntry() {
+    return !this.entry.cutLength
+      ? `${this.entry.title}(X,Y) : ${this.entry.xCoordinate}, ${
+          this.entry.yCoordinate
+        }`
+      : `${this.entry.title} : ${this.entry.cutLength}`;
+  }
+
   //set dynamic classes
   setClasses() {
     let classes = {
-      entry: true,
-      "is-complete": this.entry.completed
+      entry: true
     };
 
     return classes;

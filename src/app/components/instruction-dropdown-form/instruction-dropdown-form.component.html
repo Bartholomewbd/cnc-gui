@@ -1,53 +1,57 @@
-<div class="container-fluid">
-  <form #instructionsForm="ngForm" (ngSubmit)="onAdd()">
-    <div class="form-group">
-      <h4>Select an Instruction</h4>
-      <br /><br />
+<div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+  <div class="container-fluid">
+    <form #instructionsForm="ngForm" (ngSubmit)="onAdd()">
+      <div class="form-group">
+        <h4 class="text-center">Select an Instruction</h4>
+        <br /><br />
 
-      <select
-        (blur)="validateInstruct(instruct.value)"
-        (change)="validateInstruct(instruct.value)"
-        #instruct="ngModel"
-        [class.is-invalid]="instructHasError && instruct.touched"
-        class="custom-select"
-        name="title"
-        [(ngModel)]="title"
-        (ngModelChange)="searchInstruction(title)"
-      >
-        <option value="default">Instruction Tool Box</option>
-        <option *ngFor="let instruction of instructions">{{
-          instruction.title
-        }}</option>
-      </select>
-      <small
-        class="text-danger"
-        [class.d-none]="
-          !instructHasError || instruct.untouched || title !== 'SetCutLocation'
-        "
-        >Please choose an instruction</small
-      >
-    </div>
-    <div *ngIf="title">
-      <div *ngFor="let instruct of instructionDetails">
-        <p>Instruction Details: {{ instruct.description }}</p>
+        <select
+          (blur)="validateInstruct(instruct.value)"
+          (change)="validateInstruct(instruct.value)"
+          #instruct="ngModel"
+          [class.is-invalid]="instructHasError && instruct.touched"
+          class="custom-select"
+          name="title"
+          [(ngModel)]="title"
+          (ngModelChange)="searchInstruction(title)"
+        >
+          <option value="default">Instruction Tool Box</option>
+          <option *ngFor="let instruction of instructions">{{
+            instruction.title
+          }}</option>
+        </select>
+        <small
+          class="text-danger"
+          [class.d-none]="
+            !instructHasError ||
+            instruct.untouched ||
+            title !== 'SetCutLocation'
+          "
+          >Please choose an instruction</small
+        >
       </div>
-    </div>
-
-    <div class="form-group">
-      <label for="cutLength">Length of Cut</label>
-      <div class="input-group">
-        <input
-          type="number"
-          name="cutLength"
-          class="form-control"
-          name="cutLength"
-          [(ngModel)]="cutLength"
-        />
+      <div *ngIf="title">
+        <div *ngFor="let instruct of instructionDetails">
+          <p>Instruction Details: {{ instruct.description }}</p>
+        </div>
       </div>
-    </div>
 
-    <button class="btn btn-primary" type="submit">
-      Add to Program
-    </button>
-  </form>
+      <div class="form-group">
+        <label for="cutLength">Length of Cut</label>
+        <div class="input-group">
+          <input
+            type="number"
+            name="cutLength"
+            class="form-control"
+            name="cutLength"
+            [(ngModel)]="cutLength"
+          />
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        Add to Program
+      </button>
+    </form>
+  </div>
 </div>
