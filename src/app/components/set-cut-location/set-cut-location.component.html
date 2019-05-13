@@ -1,4 +1,4 @@
-<div class="card text-white bg-secondary mb-3" style="width: 20rem;">
+<div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
   <div class="container-fluid">
     <form #dimensionsForm="ngForm" (ngSubmit)="onAdd()">
       <div class="form-group">
@@ -17,7 +17,11 @@
           name="yCoordinate"
           [(ngModel)]="yCoordinate"
         />
-        <button class="btn btn-primary" type="submit">Set Coordinates</button>
+        <div class="text-center">
+          <button class="btn btn-primary  mt-2" type="submit">
+            Set Coordinates
+          </button>
+        </div>
       </div>
     </form>
   </div>

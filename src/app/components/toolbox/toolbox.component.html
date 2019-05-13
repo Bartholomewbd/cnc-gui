@@ -1,9 +1,13 @@
-<div class="cointainer">
+<div>
   <app-set-material-dimensions></app-set-material-dimensions>
-
-  <app-set-cut-location (addEntry)="addEntry($event)"></app-set-cut-location>
-
-  <app-instruction-dropdown-form
-    (addEntry)="addEntry($event)"
-  ></app-instruction-dropdown-form>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <app-set-cut-location (addEntry)="addEntry($event)"></app-set-cut-location>
+  </div>
+  <div class="col-md-6">
+    <app-instruction-dropdown-form
+      (addEntry)="addEntry($event)"
+    ></app-instruction-dropdown-form>
+  </div>
 </div>

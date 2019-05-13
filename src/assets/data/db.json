@@ -1,28 +1,16 @@
 {
   "programentries": [
     {
-      "id": 1,
+      "title": "CutMoveSouth",
+      "cutLength": 32,
+      "completed": false,
+      "id": 1
+    },
+    {
       "title": "CutMoveEast",
-      "cutLength": 5,
-      "completed": false
-    },
-    {
-      "title": "CutMoveSouth",
-      "cutLength": 25,
+      "cutLength": 23,
       "completed": false,
-      "id": 3
-    },
-    {
-      "title": "CutMoveWest",
-      "cutLength": 30,
-      "completed": false,
-      "id": 4
-    },
-    {
-      "title": "CutMoveSouth",
-      "cutLength": 25,
-      "completed": false,
-      "id": 5
+      "id": 2
     }
   ],
   "instructions": [

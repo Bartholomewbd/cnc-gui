@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppComponent } from "./app.component";
 import { ProgramComponent } from "./components/program/program.component";
-import { InstructionComponent } from "./components/instruction/instruction.component";
 import { ToolboxComponent } from "./components/toolbox/toolbox.component";
 import { ProgramEntryComponent } from "./components/program-entry/program-entry.component";
 import { InstructionService } from "./services/instruction.service";
@@ -20,7 +19,7 @@ import { CoordinatesComponent } from "./components/coordinates/coordinates.compo
   declarations: [
     AppComponent,
     ProgramComponent,
-    InstructionComponent,
+
     ToolboxComponent,
     ProgramEntryComponent,
     SetMaterialDimensionsComponent,

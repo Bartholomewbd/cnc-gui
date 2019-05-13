@@ -18,10 +18,10 @@ export class InstructionDropdownFormComponent implements OnInit {
 
   public instructionDetails: object = [];
 
-  constructor(public _instructionService: InstructionService) {}
+  constructor(public instructionService: InstructionService) {}
 
   ngOnInit() {
-    this._instructionService.getInstructions().subscribe(instructions => {
+    this.instructionService.getInstructions().subscribe(instructions => {
       this.instructions = instructions;
     });
   }
@@ -42,13 +42,13 @@ export class InstructionDropdownFormComponent implements OnInit {
     }
   }
 
+  //create a new entry and emit it
   onAdd() {
     const newEntry = {
       title: this.title,
       cutLength: this.cutLength,
       completed: false
     };
-
     this.addEntry.emit(newEntry);
   }
 }

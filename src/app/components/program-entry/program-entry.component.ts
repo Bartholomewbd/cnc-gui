@@ -14,6 +14,7 @@ export class ProgramEntryComponent implements OnInit {
 
   ngOnInit() {}
 
+  //Correct the format based on whether the entry has coordinates or length
   formatEntry() {
     return !this.entry.cutLength
       ? `${this.entry.title}(X,Y) : ${this.entry.xCoordinate}, ${
@@ -31,6 +32,7 @@ export class ProgramEntryComponent implements OnInit {
     return classes;
   }
 
+  //Emit the event to delete the Entry
   onDelete(entry) {
     this.deleteEntry.emit(entry);
   }

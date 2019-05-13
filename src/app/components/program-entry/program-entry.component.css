@@ -10,7 +10,8 @@
 }
 
 .entry {
-  background: #333;
+  color: #111;
+  background: #d7d7d7;
   padding: 10px;
   border-bottom: 1px #ccc dotted;
 }

@@ -2,3 +2,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+h1 {
+  font-family: "Modak", Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  color: #333;
+}

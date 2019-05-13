@@ -1,11 +1,11 @@
-<app-coordinates [entry]="entry"></app-coordinates>
+<div class="card text-white bg-secondary mb-3" style="max-width: 30rem">
+  <app-coordinates [coordinates]="coordinates"> </app-coordinates>
 
-<div class="card text-white bg-secondary mb-3" style="width: 25rem;">
-  <app-program-entry
-    *ngFor="let entry of entries"
-    [entry]="entry"
-    (deleteEntry)="deleteEntry($event)"
-  ></app-program-entry>
-
-  <button (click)="runProgram()">Run Program</button>
+  <div class="card border-dark mb-3" style="min-height: 15rem;">
+    <app-program-entry
+      *ngFor="let entry of entries"
+      [entry]="entry"
+      (deleteEntry)="deleteEntry($event)"
+    ></app-program-entry>
+  </div>
 </div>

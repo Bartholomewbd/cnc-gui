@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output } from "@angular/core";
 import { Entry } from "src/app/models/entry";
+import { Coordinate } from "../../models/coordinate";
 
 @Component({
   selector: "app-coordinates",
@@ -7,26 +8,23 @@ import { Entry } from "src/app/models/entry";
   styleUrls: ["./coordinates.component.css"]
 })
 export class CoordinatesComponent implements OnInit {
-  @Input() entry: Entry;
-  x: number = 0;
-  y: number = 0;
+  @Input() coordinates: Coordinate[];
 
-  coordinates = `X: ${this.x} Y: ${this.y}`;
+  currentCoordinates: Coordinate = { x: 0, y: 0 };
 
   constructor() {}
 
   ngOnInit() {}
 
-  updateCoordinates(entry: Entry) {
-    switch (entry.title) {
-      case "CutMoveNorth":
-        return (entry.yCoordinate -= 1);
-      case "CutMoveSouth":
-        return (entry.yCoordinate -= 1);
-      case "CutMoveEast":
-        return (entry.xCoordinate += 1);
-      case "CutMoveWest":
-        return (entry.yCoordinate -= 1);
-    }
+  displayCoordinates() {
+    return `X: ${this.currentCoordinates.x}, Y: ${this.currentCoordinates.y}`;
+  }
+
+  updateCurrentCoordinates() {
+    this.coordinates.forEach((c, index) => {
+      setTimeout(() => {
+        this.currentCoordinates = c;
+      }, 3000 * index);
+    });
   }
 }

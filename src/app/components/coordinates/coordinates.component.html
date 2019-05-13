@@ -1,1 +1,6 @@
-<h2 class="text-center">{{ coordinates }}</h2>
+<h2 class="text-center">{{ displayCoordinates() }}</h2>
+<div class="text-center">
+  <button class="btn btn-outline-primary" (click)="updateCurrentCoordinates()">
+    Run Program
+  </button>
+</div>

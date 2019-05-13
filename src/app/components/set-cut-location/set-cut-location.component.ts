@@ -22,7 +22,6 @@ export class SetCutLocationComponent implements OnInit {
       yCoordinate: this.yCoordinate,
       completed: false
     };
-    console.log(newEntry);
     this.addEntry.emit(newEntry);
   }
 }
