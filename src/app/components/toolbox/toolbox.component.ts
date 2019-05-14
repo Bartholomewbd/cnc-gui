@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { ProgramEntriesService } from "src/app/services/program-entries.service";
 
 import { Entry } from "../../models/entry";
