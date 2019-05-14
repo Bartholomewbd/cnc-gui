@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 
 @Component({
-  selector: 'app-set-material-dimensions',
-  templateUrl: './set-material-dimensions.component.html',
-  styleUrls: ['./set-material-dimensions.component.css']
+  selector: "app-set-material-dimensions",
+  templateUrl: "./set-material-dimensions.component.html",
+  styleUrls: ["./set-material-dimensions.component.css"]
 })
-export class SetMaterialDimensionsComponent implements OnInit {
+export class SetMaterialDimensionsComponent {
+  @Output() addDimensions: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  private matLength: number;
+  private matWidth: number;
 
-  ngOnInit() {
+  //Set up the new dimensions and emit up to add to database.
+  submitDimensions() {
+    const dimensions = {
+      title: "SetMaterialBlockDimensions",
+      length: this.matLength,
+      width: this.matWidth
+    };
+    this.addDimensions.emit(dimensions);
   }
-
 }

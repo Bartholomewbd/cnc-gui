@@ -1,14 +1,17 @@
 {
+  "dimensions": [
+    {
+      "title": "SetMaterialBlockDimensions",
+      "length": 24,
+      "width": 32,
+      "id": 0
+    }
+  ],
   "programentries": [
     {
-      "title": "CutMoveSouth",
-      "cutLength": 32,
-      "completed": false,
-      "id": 1
-    },
-    {
-      "title": "CutMoveEast",
-      "cutLength": 23,
+      "title": "SetCutLocation",
+      "xCoordinate": 32,
+      "yCoordinate": 12,
       "completed": false,
       "id": 2
     }

@@ -5,16 +5,13 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
   templateUrl: "./set-cut-location.component.html",
   styleUrls: ["./set-cut-location.component.css"]
 })
-export class SetCutLocationComponent implements OnInit {
+export class SetCutLocationComponent {
   @Output() addEntry: EventEmitter<any> = new EventEmitter();
 
   private xCoordinate: number;
   private yCoordinate: number;
 
-  constructor() {}
-
-  ngOnInit() {}
-
+  //add function when form is submitted and emit the entry up
   onAdd() {
     const newEntry = {
       title: "SetCutLocation",

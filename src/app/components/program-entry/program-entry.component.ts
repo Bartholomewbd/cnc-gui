@@ -6,13 +6,9 @@ import { Entry } from "src/app/models/entry";
   templateUrl: "./program-entry.component.html",
   styleUrls: ["./program-entry.component.css"]
 })
-export class ProgramEntryComponent implements OnInit {
+export class ProgramEntryComponent {
   @Input() entry: Entry;
   @Output() deleteEntry: EventEmitter<Entry> = new EventEmitter();
-
-  constructor() {}
-
-  ngOnInit() {}
 
   //Correct the format based on whether the entry has coordinates or length
   formatEntry() {

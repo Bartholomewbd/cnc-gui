@@ -1,9 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ProgramEntriesService } from "src/app/services/program-entries.service";
-
 import { Entry } from "../../models/entry";
-import { Coordinate } from "../../models/coordinate";
-import { ConditionalExpr } from "@angular/compiler";
 
 @Component({
   selector: "app-program",
@@ -25,7 +22,7 @@ export class ProgramComponent implements OnInit {
     this.programEntriesService.getEntries().subscribe(entries => {
       this.entries = entries;
     });
-
+    //use the observable data to build the coordinates of the program
     this.programEntriesService.getEntries().subscribe(() => {
       this.buildCoordinates();
     });
@@ -68,6 +65,4 @@ export class ProgramComponent implements OnInit {
       this.coordinates.push({ x: this.x, y: this.y });
     });
   }
-
-  runProgram() {}
 }

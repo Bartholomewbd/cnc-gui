@@ -1,16 +1,31 @@
 <div class="card text-white bg-secondary mb-3" style="max-width: 40rem;">
   <div class="container-fluid">
-    <form #dimensionsForm="ngForm">
+    <form #dimensionsForm="ngForm" (ngSubmit)="submitDimensions()">
       <div class="form-group">
         <h4 class="text-center">Set Material Block Dimensions</h4>
         <div class="form-inline">
           <label>Length</label>
-          <input type="number" class="form-control" />
+          <input
+            type="number"
+            class="form-control"
+            name="matLength"
+            [(ngModel)]="matLength"
+          />
           <label class="ml-3">Width</label>
-          <input type="number" class="form-control" />
+          <input
+            type="number"
+            class="form-control"
+            name="matWidth"
+            [(ngModel)]="matWidth"
+            required
+          />
         </div>
         <div class="text-center mt-2">
-          <button class="btn btn-outline-primary " type="submit">
+          <button
+            class="btn"
+            type="submit"
+            [disabled]="dimensionsForm.form.invalid"
+          >
             Set Dimensions
           </button>
         </div>

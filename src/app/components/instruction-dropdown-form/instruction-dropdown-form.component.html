@@ -1,6 +1,7 @@
 <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
   <div class="container-fluid">
     <form #instructionsForm="ngForm" (ngSubmit)="onAdd()">
+      {{ instructionsForm.form.valid }}
       <div class="form-group">
         <h4 class="text-center">Select an Instruction</h4>
         <br /><br />
@@ -14,6 +15,7 @@
           name="title"
           [(ngModel)]="title"
           (ngModelChange)="searchInstruction(title)"
+          required
         >
           <option value="default">Instruction Tool Box</option>
           <option *ngFor="let instruction of instructions">{{
@@ -22,11 +24,7 @@
         </select>
         <small
           class="text-danger"
-          [class.d-none]="
-            !instructHasError ||
-            instruct.untouched ||
-            title !== 'SetCutLocation'
-          "
+          [class.d-none]="!instructHasError || instruct.untouched"
           >Please choose an instruction</small
         >
       </div>
@@ -45,11 +43,16 @@
             class="form-control"
             name="cutLength"
             [(ngModel)]="cutLength"
+            required
           />
         </div>
       </div>
       <div class="text-center">
-        <button class="btn mt-1" type="submit">
+        <button
+          class="btn mt-1"
+          type="submit"
+          [disabled]="instructionsForm.form.invalid"
+        >
           Add to Program
         </button>
       </div>

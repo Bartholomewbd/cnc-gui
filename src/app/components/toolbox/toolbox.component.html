@@ -1,5 +1,7 @@
 <div>
-  <app-set-material-dimensions></app-set-material-dimensions>
+  <app-set-material-dimensions
+    (addDimensions)="addDimensions($event)"
+  ></app-set-material-dimensions>
 </div>
 <div class="row">
   <div class="col-md-6">

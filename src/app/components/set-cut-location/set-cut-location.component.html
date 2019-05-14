@@ -1,10 +1,11 @@
 <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
   <div class="container-fluid">
-    <form #dimensionsForm="ngForm" (ngSubmit)="onAdd()">
+    <form #setCutForm="ngForm" (ngSubmit)="onAdd()">
       <div class="form-group">
         <h4>Set Cut Location Coordinates</h4>
         <label>X</label>
         <input
+          required
           type="number"
           class="form-control"
           name="xCoordinate"
@@ -12,13 +13,18 @@
         />
         <label>Y</label>
         <input
+          required
           type="number"
           class="form-control"
           name="yCoordinate"
           [(ngModel)]="yCoordinate"
         />
         <div class="text-center">
-          <button class="btn btn-primary  mt-2" type="submit">
+          <button
+            class="btn  mt-2"
+            type="submit"
+            [disabled]="setCutForm.form.invalid"
+          >
             Set Coordinates
           </button>
         </div>
