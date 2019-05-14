@@ -1,4 +1,10 @@
-# CncGui
+# Prototype GUI for a CNC machine
+
+This is a prototype project to implement a browser based interface for a CNC machine.  The requirements can be seen below.
+For testing purposes the code uses a json server and the db.json file can be found in the assets/data.
+
+This app has very limited validation and error handling since it is a prototype.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
